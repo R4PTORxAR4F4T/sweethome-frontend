@@ -4,6 +4,7 @@ import ForgotPass from "@/Pages/Login/ForgotPass";
 import Otp from "@/Pages/Login/Otp";
 import ResetPass from "@/Pages/Login/ResetPass";
 import Register from "@/Pages/Register/Register";
+import Navbar from "@/Component/Navbar/Navbar";
 
 interface Datas{
   title:string,
@@ -17,6 +18,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Navbar></Navbar>
       
       <Login></Login>
       <ForgotPass></ForgotPass>
