@@ -10,7 +10,7 @@ const ForgotPass = () => {
                     <p className='text-center text-xs'>Please enter your number</p>
                 </div>
                 <div className='mt-9 flex flex-col gap-5'>
-                    <input placeholder='Mobile Number' className='px-4 py-2 border border-black rounded-xl w-full' type="number" />
+                    <input placeholder='Mobile Number' className='px-4 py-2 border border-black rounded-xl w-full bg-white' type="number" />
                 </div>
                 <div className=''>
                     <button className='bg-black text-white w-full py-2 rounded-xl mt-4'>Reset Password</button>

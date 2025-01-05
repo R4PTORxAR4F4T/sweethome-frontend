@@ -10,7 +10,7 @@ const Otp = () => {
                     <p className='text-center text-xs'>Please the OTP to proceed</p>
                 </div>
                 <div className='mt-9 flex flex-col gap-5'>
-                    <input placeholder='OTP' className='px-4 py-2 border border-black rounded-xl w-full' type="text" />
+                    <input placeholder='OTP' className='bg-white px-4 py-2 border border-black rounded-xl w-full' type="text" />
                 </div>
                 <div className=''>
                     <button className='bg-black text-white w-full py-2 rounded-xl mt-4'>VERIFY</button>

@@ -9,8 +9,8 @@ const Login = () => {
                     <p className='text-center text-xs'>Please enter your credentials to log in</p>
                 </div>
                 <div className='mt-9 flex flex-col gap-5'>
-                    <input placeholder='Username' className='px-4 py-2 border border-black rounded-xl w-full' type="text" />
-                    <input placeholder='Password' className='px-4 py-2 border border-black rounded-xl w-full' type="password" />
+                    <input placeholder='Username' className='bg-white px-4 py-2 border border-black rounded-xl w-full' type="text" />
+                    <input placeholder='Password' className='bg-white px-4 py-2 border border-black rounded-xl w-full' type="password" />
                 </div>
                 <div className='mt-4'>
                     <a className='text-sm' href="">Forgot password?</a>

@@ -10,8 +10,8 @@ const ResetPass = () => {
                     <p className='text-center text-xs'>Please enter your new password</p>
                 </div>
                 <div className='mt-9 flex flex-col gap-3'>
-                    <input placeholder='New Password' className='px-4 py-2 border border-black rounded-xl w-full' type="text" />
-                    <input placeholder='Confirm Password' className='px-4 py-2 border border-black rounded-xl w-full' type="text" />
+                    <input placeholder='New Password' className='bg-white px-4 py-2 border border-black rounded-xl w-full' type="password" />
+                    <input placeholder='Confirm Password' className='bg-white px-4 py-2 border border-black rounded-xl w-full' type="password" />
                 </div>
                 <div className=''>
                     <button className='bg-black text-white w-full py-2 rounded-xl mt-6'>RESET PASSWORD</button>

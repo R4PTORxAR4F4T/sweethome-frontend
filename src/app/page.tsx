@@ -17,7 +17,7 @@ export default async function Home() {
   const datas:Datas[] = await resp.json();
 
   return (
-    <div>
+    <div className="">
       <Navbar></Navbar>
       
       <Login></Login>
