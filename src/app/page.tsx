@@ -19,6 +19,7 @@ export default async function Home() {
   return (
     <div className="">
       <Navbar></Navbar>
+      <Card></Card>
       
       <Login></Login>
       <ForgotPass></ForgotPass>
