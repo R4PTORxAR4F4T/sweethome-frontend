@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Login = () => {
@@ -15,7 +16,9 @@ const Login = () => {
                 <div className='mt-4'>
                     <a className='text-sm' href="">Forgot password?</a>
                     <button className='bg-black text-white w-full py-2 rounded-xl mt-7'>SIGN IN</button>
-                    <button className='w-full py-2 rounded-xl'>Sign up?</button>
+                    <div className='flex justify-center mt-2'>
+                    <Link href={"/register"} className='py-2 rounded-xl'>Sign up?</Link>
+                    </div>
                 </div>
             </div>
         </div>
