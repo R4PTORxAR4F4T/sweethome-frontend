@@ -1,26 +1,20 @@
+import axios from "axios";
 import Card from "@/Component/Card/Card";
 
-interface Datas{
-  title:string,
-  id:number
-}
-
 export default async function Home() {
+  let datas = [];
 
-  const resp = await fetch('https://api.sampleapis.com/coffee/hot');
-  const datas:Datas[] = await resp.json();
+  try {
+    const resp = await axios.get('https://dummyjson.com/products');
+    datas = resp.data.products;
+
+  } catch (error) {
+    console.error("Error fetching coffee data:", error);
+  }
 
   return (
-    <div className="">
-      
-      <Card></Card>
-
-      {/* {datas.map((data) => <li key={data.id}>{data.title}</li> )} */}
-
-      {/* <div>
-        {datas.map((data:any) => <Card key={data.id}></Card>)}
-      </div> */}
-
+    <div>
+      home page
     </div>
   );
 }
