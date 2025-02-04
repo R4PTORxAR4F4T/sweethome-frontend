@@ -28,7 +28,6 @@ const Login = () => {
                 password: password,
             }, { withCredentials: true });
             
-
             if (res.data && res.data.accessToken) {
                 alert(`${res.data.message}`);
 
@@ -71,9 +70,9 @@ const Login = () => {
                     />
                 </div>
                 <div className="mt-4">
-                    <a className="text-sm" href="">
+                    <Link className="text-sm" href="/forgot">
                         Forgot password?
-                    </a>
+                    </Link>
                     <button
                         onClick={handleLogin}
                         className="bg-black text-white w-full py-2 rounded-xl mt-7"
