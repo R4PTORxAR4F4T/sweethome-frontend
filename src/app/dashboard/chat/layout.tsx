@@ -2,24 +2,34 @@
 import Sidebar from "@/Component/Sidebar/Sidebar";
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const ChatLayout = ({ children }: { children: React.ReactNode }) => {
 
     const [datas, setDatas] = useState([]);
+    const router = useRouter();
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const resp = await axios.get('http://localhost:4000/control/activeticket');
-                setDatas(resp.data);
-            } catch (error) {
-                alert( error);
-            }
-        };
-
-        fetchData();
+        fetchProperty();
     }, []);
+
+    const fetchProperty = async () => {
+        try {
+            const response = await axios.get(' http://localhost:4000/control/activeticket', { withCredentials: true });
+            if (response.status === 200){
+                setDatas(response.data);
+            } else {
+                console.error("Expected an array but got:", response.data);
+            }
+        } catch (error) {
+            if (error.response && (error.response.status === 401 || error.response.status === 403)) {
+                router.push("/login");
+            } else {
+                console.error("Error fetching users:", error);
+            }
+        }
+    };
 
     return (
       <div className="flex">
@@ -85,7 +95,7 @@ const ChatLayout = ({ children }: { children: React.ReactNode }) => {
             </aside>
         </div>
         
-        <main>{children}</main>
+        <main className="w-full">{children}</main>
       </div>
     );
   };
